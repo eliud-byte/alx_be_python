@@ -1,4 +1,6 @@
-print("Enter a word to desctibe:")
+
+print("Welcome to Mad Libs!")
+print("\nEnter a word to desctibe:")
 
 adjective1 = input("\tthe day: ")
 adjective2 = input("\tan animal: ")
