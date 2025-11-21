@@ -1,17 +1,19 @@
 def perform_operation(num1, num2, operation):
+    # Check for addition
+    if operation == 'add':
+        return f"{num1} + {num2} = {num1 + num2}"
     
-    try:
-        match operation:
-            case 'add':
-                return f"{num1} + {num2} = {num1 + num2}"
-            case 'subtract':
-                return f"{num1} - {num2} = {num1 - num2}"
-            case 'multiply':
-                return f"{num1} x {num2} = {num1 * num2}"
-            case 'divide':
-                if num2 == 0:
-                    raise ZeroDivisionError("Cannot divide by zero!")
-                return f"{num1} ÷ {num2} = {num1 / num2:.2f}"
+    # Check for subtraction
+    elif operation == 'subtract':
+        return f"{num1} - {num2} = {num1 - num2}"
+    
+    # Check for division
+    elif operation == 'divide':        
+        if num2 == 0:
+            return "Error: Cannot divide by zero!"
+        return f"{num1} ÷ {num2} = {num1 / num2:.2f}"
+    
+    # Check for multiplication
+    else:
+        return f"{num1} x {num2} = {num1 * num2}"
 
-    except ZeroDivisionError:
-        print(f"Error: Cannot divide by zero!")
