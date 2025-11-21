@@ -14,6 +14,6 @@ def perform_operation(num1, num2, operation):
         return f"{num1} ÷ {num2} = {num1 / num2:.2f}"
     
     # Check for multiplication
-    else:
+    elif operation == 'multiply':
         return f"{num1} x {num2} = {num1 * num2}"
 
