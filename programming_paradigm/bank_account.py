@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, account_balance=0):
+    def __init__(self, account_balance):
         self.account_balance = account_balance
 
     def deposit(self, amount):
@@ -12,4 +12,4 @@ class BankAccount:
         return True # Return True to signal success
 
     def display_balance(self):
-        print(f"Current Balance: KES{self.account_balance:,.2f}")
+        print(f"Current Balance: ${self.account_balance:,.2f}")

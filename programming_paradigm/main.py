@@ -20,12 +20,12 @@ def main():
 
     if command == "deposit":
         account.deposit(amount)
-        print(f"Deposited: KES{amount:,.2f}")
+        print(f"Deposited: ${amount:,.2f}")
         account.display_balance()
 
     elif command == "withdraw":
         if account.withdraw(amount):
-            print(f"Withdrew: KES{amount:,.2f}")
+            print(f"Withdrew: ${amount:,.2f}")
             account.display_balance()
         else:
             print("Insufficient funds.")
