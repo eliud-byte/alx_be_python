@@ -25,7 +25,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(0, 3), -3)
         self.assertRaises(TypeError, self.calc.subtract, 2, "one")
     
-    def test_multiply(self):
+    def test_multiplication(self):
         """Test the multiply method."""
         self.assertEqual(self.calc.multiply(9, 6), 54)
         self.assertEqual(self.calc.multiply(-4, -6), 24)
@@ -35,7 +35,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(0, 0), 0)
         #self.assertRaises(TypeError, self.calc.multiply, "hundred", 5)
     
-    def test_divide(self):
+    def test_division(self):
         """Test the divide method."""
         self.assertEqual(self.calc.divide(0, 0), None)
         self.assertEqual(self.calc.divide(5, 0), None)
