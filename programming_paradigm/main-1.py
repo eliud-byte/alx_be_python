@@ -7,8 +7,8 @@ def main():
         sys.exit(1)
 
     try:
-        numerator = float(sys.argv[1])
-        denominator = float(sys.argv[2])
+        numerator = sys.argv[1]
+        denominator = sys.argv[2]
     
     except ValueError:
         print("Error: Please enter numeric values only.")
