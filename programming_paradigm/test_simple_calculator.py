@@ -15,7 +15,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.add(0, 0), 0)
         self.assertRaises(TypeError, self.calc.add, "hello", 5)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         """Test the subtract method."""
         self.assertEqual(self.calc.subtract(10, 5), 5)
         self.assertEqual(self.calc.subtract(-8, -4), -4)
