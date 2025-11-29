@@ -3,10 +3,13 @@ class BankAccount:
         self.account_balance = account_balance
 
     def deposit(self, amount):
-        amount += self.account_balance
+        self.account_balance += amount
 
     def withdraw(self, amount):
-        amount -= self.account_balance
+        if amount > self.account_balance:
+            return False # Return False to signal failure
+        self.account_balance -= amount
+        return True # Return True to signal success
 
     def display_balance(self):
-        print(f"Your balance is: KES{self.account_balance:,.2f}")
+        print(f"Current Balance: KES{self.account_balance:,.2f}")
