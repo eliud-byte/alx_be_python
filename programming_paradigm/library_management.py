@@ -3,13 +3,12 @@ class Book:
         self.title = title
         self.author = author
         self._is_checked_out = False
-        #self._is_checked_out = is_checked_out
     
     def check_out(self):
         """Marks the book as checked out."""
         self._is_checked_out = True
     
-    def return_to_shelf(self):
+    def return_book(self):
         """Marks the book available."""
         self._is_checked_out = False
 
@@ -39,7 +38,7 @@ class Library:
         """Finds a book by title and marks it as returned."""
         for book in self._books:
              if book.title == title:
-                book.return_to_shelf()
+                book.return_book()
                 print(f"Successfully returned '{title}'.")
                 return
         print(f"Book '{title}' does not belong to this library.")
