@@ -41,19 +41,15 @@ class Library():
     def add_book(self, book: Book):
         """Adds a Book, EBook, or PrintBook instance to the library's collection."""
         if isinstance(book, Book):
-            self.books.append(book)
-            print(f"Added '{book.title}' to the library")    
+            self.books.append(book)  
         else:
             print("Error: Item is not a valid Book type.")
 
     def list_books(self):
         """Prints details of every book in the library."""
-        print("\n--- Current Library Collection ---")
         if not self.books:
-            print("The library is currently emply.")
+            print("The library is currently empty.")
             return
              
         for book in self.books:
             print(book)
-
-        print("------------------------------------------------------")
