@@ -4,9 +4,11 @@ class Book:
         self.title = title
         self.author = author
 
-    def get_details(self) -> str:
+    def __str__(self):
+        return f"{self.__class__.__name__}: {self.title} by {self.author}"
+
+    def get_details(self):
         """Returns basic book details."""
-        #return f"Title: {self.title}, Author {self.author}"
         return f"{self.__class__.__name__}: {self.title} by {self.author}"
 
 class EBook(Book):
@@ -15,7 +17,7 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size
 
-    def get_details(self) -> str:
+    def __str__(self):
         """Returns details specific to the EBook."""
         base_details = super().get_details()
         return f"{base_details}, File Size: {self.file_size}KB"
@@ -26,7 +28,7 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
-    def get_details(self) -> str:
+    def __str__(self):
         """Returns details specific to the PrintBook."""
         base_details = super().get_details()
         return f"{base_details}, Page Count: {self.page_count}"
@@ -50,9 +52,8 @@ class Library():
         if not self.books:
             print("The library is currently emply.")
             return
-        
-        
+             
         for book in self.books:
-            print(book.get_details())
+            print(book)
 
-        print("-------------------------------------------------------")
+        print("------------------------------------------------------")
